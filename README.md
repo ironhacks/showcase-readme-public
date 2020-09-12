@@ -14,6 +14,8 @@ a) Solution transparency
 
 b) Solution transparency with component similarity index
 
+Full transparency implies: Performance transparency and solution transparency: All hackers had information about other's scores and also their code and their running application. Transparency is designed into the platform and it is not under control of the participants (they couldn't decide whether to make it transparent or not).
+
 
 A Few Samples of the Winner Apps: 
 
@@ -38,6 +40,8 @@ a) Within subject treatment: Different level of solution transparency.
 b) No transparency at all.
 
 c) Solution transparency.
+
+Full transparency implies: Performance transparency and solution transparency: All hackers had information about other's scores and also their code and their running application. Transparency is designed into the platform and it is not under control of the participants (they couldn't decide whether to make it transparent or not).
 
 
 A Few Samples of the Winner Apps: 
