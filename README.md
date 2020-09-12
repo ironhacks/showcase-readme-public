@@ -8,13 +8,11 @@ Type of Hack: Class Hack Students from Universidad Nacional de Colombia (UNAL).
 
 Time frame: 02/05/2019 to 02/20/2019.
 
-In this IronHacks, we implemented a three treatments:
+In this IronHacks, we implemented a two treatments:
 
-a) Within subject treatment: Different level of solution transparency.
+a) Solution transparency
 
-b) No transparency at all.
-
-c) Solution transparency.
+b) Solution transparency with component similarity index
 
 https://ironhacks.github.io/showcase-2019-spring-jdrodriguezrui/
 
