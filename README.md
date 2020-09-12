@@ -1,6 +1,12 @@
-# This README file explains each of the winner apps of the IronHacks competition in details. 
+## This README file explains each of the winner apps of the IronHacks competition in details. 
 
 ## Spring 2019 Winner Apps
+
+Basics: This hack was focused on "Find me a safe and affordable district to live in near the NYU Stern School of Business, New York”".
+
+Type of Hack: Class Hack Students from Universidad Nacional de Colombia (UNAL).
+
+Time frame: 02/05/2019 to 02/20/2019.
 
 https://ironhacks.github.io/showcase-2019-spring-jdrodriguezrui/
 
