@@ -14,6 +14,9 @@ a) Solution transparency
 
 b) Solution transparency with component similarity index
 
+
+A Few Samples of the Winner Apps: 
+
 https://ironhacks.github.io/showcase-2019-spring-jdrodriguezrui/
 
 https://ironhacks.github.io/showcase-2019-spring-difcortesgu
@@ -35,6 +38,9 @@ a) Within subject treatment: Different level of solution transparency.
 b) No transparency at all.
 
 c) Solution transparency.
+
+
+A Few Samples of the Winner Apps: 
 
 https://ironhacks.github.io/showcase-2018-spring-juaccardenasgom/
 
