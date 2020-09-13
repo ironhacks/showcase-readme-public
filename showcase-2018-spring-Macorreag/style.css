@@ -1,0 +1,193 @@
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/*Settings of  divs to show information*/
+.panel{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7 ) , rgba(34, 37, 42,0.8) );
+  color: rgb(255, 255, 255);
+  border: solid;
+  border-color: black;
+  padding: 0;
+}
+.dropdown{
+  color: white;
+}
+.navbar{
+  color: white;
+}
+
+
+tr:hover td {
+  background-color: rgba(0, 0, 0,0.5);
+}
+
+.test div{
+  font-size:10px;
+  background-color:green;
+  text-align:right;
+  padding:3px;
+  margin:1px;
+  color:white;
+}
+.progress-bar{
+
+
+}
+.container.custom-container {
+  margin: 10px;
+}
+
+#tooltip{
+  color: #46DB7E;
+  position: absolute;
+  min-width: 80px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #46DB7E;
+  padding: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+hr {
+  margin-top: 1;
+  margin-bottom: 1;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/*Style for barChart*/
+#barChart{
+  background: rgba(45, 48, 53,0.8);
+}
+.bar{
+  fill: rgb(93, 40, 136);
+}
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#barChart text{
+  fill : white;
+}
+.axis--x .tick line{
+  stroke : white;
+  stroke-width  : 1;
+}
+.axis--x path{
+  stroke : white;
+  stroke-width  : 1;
+}
+.axis--x .tick text{
+  transform: rotate(90);
+
+}
+.axis--y .tick line{
+  stroke : white;
+  stroke-width  : 1;
+}
+.axis--y path{
+  stroke : white;
+  stroke-width  : 1;
+}
+
+/*Icons */
+
+.winner {
+  padding: 32px;
+  display: inline-block;
+  background-image:  url("https://i.imgur.com/IEayV2a.png");
+}
+.second {
+  padding: 32px;
+  display: inline-block;
+  background-image:  url("https://i.imgur.com/jOIBoeu.png");
+}
+.third {
+  padding: 32px;
+  display: inline-block;
+  background-image:  url("https://i.imgur.com/bEXVEfR.png");
+}
+/*Configuration InfoWindow in map */
+.infoNeigh{
+
+}
+/*InfoWindow no habitable shape*/
+.infoIna{
+
+}
+/*export Button of table
+*/
+.menuitem{
+  background-color: blue;
+}
+
+
+
+/**/
+#chart {
+  height: 360px;
+  margin: 0 auto;                            /* NEW */
+  position: relative;
+  width: 360px;
+}
+
+.legend {
+  font-size: 15px;
+}
+rect {
+  cursor: pointer;
+  stroke-width: 2;
+}
+rect.disabled {                              /* NEW */
+  fill: transparent !important;              /* NEW */
+  }                                            /* NEW */
+
+  .textButMap{
+    color: rgb(255,255,255);
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 38px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .butStyle{
+    background-color:  rgb(102, 53, 143);
+    border: 2px solid rgb(68, 1, 127);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(200,0,0,.3);
+    margin-bottom: 22px;
+    cursor: pointer;
+    text-align: center;
+  }
+  #Legend{
+    text-align: center;
+    background: rgba(45, 48, 53,0.8);
+  }
+
+  /*for pie chaart*/
+  .arc text {
+    font: 10px sans-serif;
+    text-anchor: middle;
+  }
+
+  .arc path {
+    stroke: #fff;
+  }
+
+  /**/

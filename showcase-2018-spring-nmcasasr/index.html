@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Kanit|Monoton|Montserrat+Subrayada|Righteous" rel="stylesheet">
+    <title></title>
+    <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+<div class="row justify-content-lg-center">
+  <div class="col-lg-auto">
+    <h1 style="font-family: 'Monoton', cursive; font-size: 400%;">NOMADIC</h1>
+<!-- <img src="https://image.ibb.co/eF9VrJ/Mesa_de_trabajo_2.png" > -->
+  </div>
+</div>
+
+<div class="row">
+
+        <div class="col-sm-4">
+          <h4>Price rent</h4>
+          <select class="selectMoney">
+    <option value="31">Extreme low income</option>
+    <option value="32">Very Low income</option>
+    <option value="33">Low income</option>
+    <option value="34">Moderate income</option>
+    <option value="35">Middle Income</option>
+          </select>
+          <h4>Borough</h4>
+          <select class="selectBorouhg">
+      <option value="Brooklyn">Brooklyn</option>
+      <option value="Queens">Queens</option>
+      <option value="Bronx">Bronx</option>
+      <option value="Staten Island">Staten Island</option>
+      <option value="Manhattan">Manhattan</option>
+          </select>
+          <div class='button'>
+                    <a href="#" id ="export" role='button'>Export table to CSV</a>
+                </div>
+       <button id="buttonVivienda">Price</button>
+       <button id="buttonSeguridad">Security</button>
+       <button id="buttonDistancia">Distance</button>
+       <div id="tableWrapper">
+         <div id="tableScroll">
+       <table cellpadding="1">
+         <thead>
+         <tr>
+           <th>Borough</th>
+           <th>Numer</th>
+         </tr>
+           <tbody id="mainTableBody">
+
+           </tbody>
+         </thead>
+       </table>
+       </div>
+
+</div>
+</div>
+        <div class="col-sm-4">
+            <div id="map"> </div>
+
+                    </div>
+
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <h2>Price</h2>  
+              <div id='myChart'></div>
+
+          </div>
+          <div class="col-sm-4">
+              <h2>Security</h2>
+              <div id='myChart1'></div>
+
+          </div>
+          <div class="col-sm-4">
+              <h2> Distance</h2>
+              <div id='myChart2'></div>
+
+          </div>
+          </div>
+        </div>
+
+</div>
+</div>
+
+<script  src="https://code.jquery.com/jquery-3.1.1.min.js">
+</script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<script src="index.js">
+</script>
+<script src="index2.js">
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDphGVfxEq0-P0a0Fn8SS7tijAeU0tYwss&libraries=geometry&callback=initMap">
+    </script>
+    <script>
+
+    </script>
+  </body>
+</html>

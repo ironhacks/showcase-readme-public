@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<!-- Custom css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+
+	<title>SLINY</title>
+	<link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2015/12/08/17/38/magnifying-glass-1083373_960_720.png">
+
+</head>
+<body>
+	<div class="container-fluid" id=fade-in>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="topnav">
+				  <a class="active" href="#">SLINY</a>
+				  <a href="#">Home</a>
+				  <a href="#analytics">Analytics</a>
+				  <a href="#about">About</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id = "title">
+			</div>
+		</div>
+
+		<div class="row" id = "containerCheck">
+			<div class="col-md-6">
+				<form class="form-inline">
+					<div class="form-group">
+						<label class="container">Security
+							<input type="checkbox" id="crimeCheck" onclick="crimeChecked()" checked="checked">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+
+					<div class="form-group">
+						<label class="container">Distance
+							<input type="checkbox" id="distanceCheck" onclick="distanceChecked()" checked="checked">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+
+					<div class="form-group">
+						<label class="container">Affordability
+							<input type="checkbox" id="myCheck" onclick="afforChecked()" checked="checked">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="row" id = "container_Map">
+			<div class="col-md-6 pagination-centered">
+				<div id="googleMapContainer"></div>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-6" id = "check">
+
+					</div>
+				</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<table align = "center" id="ranking">
+						<thead>
+							<tr>
+								<th colspan="6" id=titTable> TOP 3 NEW YORK'S DISTRICTS </th>
+							</tr>
+							<tr id=titColumn>
+								<th> Place </th>
+								<th> Borough </th>
+								<th> BoroCD </th>
+								<th> Security </th>
+								<th> Affordability </th>
+								<th> Distance (km) </th>
+							</tr>
+							<tbody id="mainTableBody">
+							</tbody>
+						</thead>
+					</table>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3">
+					<button onclick="exportTableToCSV('topDistricts.csv')" class="button" style="vertical-align:middle"><span>Export Table</span>
+				</div>
+				<div class="col-md-3">
+					<button onclick="markerSetter(true)" class="button" style="vertical-align:middle"><span>Show Markers</span>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12" id="analytics">
+				<hr>
+				<h2 id="chartTitle">Analytics</h2>
+				<p id="pChart">Current table's graphical representation</p>
+				<div class="row">
+					<div class="col-md-6">
+						<div id ="chartSecurity"></div>
+					</div>
+					<div class="col-md-6">
+						<div id ="chartAffor"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div id ="chartDistance"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h6 id=about>About</h6>
+				<p id="pAbout">Application developed by Iván Andrés Lemus Moreno, Universidad Nacional de Colombia student</p>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Jquery -->
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+
+	<!-- Custom js -->
+	<script type="text/javascript" src="index.js"></script>
+
+	<!-- d3 -->
+	<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/82873FD5-EBB3-F14D-B2BD-ED32666FE852/main.js" charset="UTF-8"></script><script src="https://d3js.org/d3.v4.min.js"></script>
+	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+
+	<!-- Google Map -->
+   <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDphGVfxEq0-P0a0Fn8SS7tijAeU0tYwss&libraries=geometry&callback=onGoogleMapResponse">
+	</script>
+
+</body>
+</html>
