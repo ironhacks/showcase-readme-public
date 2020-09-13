@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <title>NY District Guide</title>
+      <link rel="icon" href="https://image.flaticon.com/icons/svg/148/148839.svg">
+      <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="./css/main.css"/>
+     </head>
+
+    <body>
+      <div id='loader' class="container">
+        <div class="row d-flex p-2">
+          <div class="align-self-center">
+            <h1>Wait a moment, please</h1>
+            <p>Loading resources...</p>
+            <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" id="barraCarga"role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+        	</div>
+      	</div>
+      </div>
+      <div id='content'>
+        <nav class="navbar navbar-light fixed-top">
+          <ul class="nav navbar-justified">
+            <a class="btn btn-outline-light" id="navIntBut" href="#intrSection">Instructions</a>
+            <a class="btn btn-outline-light" id="navMapBut" href="#mapSection">Map</a>
+            <a class="btn btn-outline-light" id="navChartBut" href="#chartSection">Charts</a>
+            <button class="btn btn-outline-light" id="navCredBut" href="#creditsSection">Credits</button>
+          </ul>        
+        </nav>
+        
+        <div class="jumbotron jumbotron-fluid  full-viewport" id="landingDiv">
+          <div class ="container landing">
+            <h1>Live and study in NY!</h1>
+            <p>Want to study in the NYU Stern School of Bussiness? Are you new to New York and you don't know how you will choose where to live? Would you like to compare each district based on interesting criteria? We've got you covered!</p>          
+            <a class="btn btn-outline-light" href="#intrSection">Introduce me!</a>
+            <a class="btn btn-outline-light" id="goToMapBtn" class="btn btn-outline-light" href="#mapSection">I already know how it works</a>
+          </div>
+        </div>
+        
+        <div class="container-fluid">
+          <div class="row full-viewport introduction" id="intrSection">
+            <div class ="col-md-6 ">
+              <div id="explanationDiv">
+                <h3>Comparing made easy!</h3>                
+              <p>With this tool you'll be able to compare the 59 districts of New York City by criteria such as distance to NYU, number of affordable living units, safety and more!</p>
+              <p>Click on a criteria button to rank the districts by that criteria. Remember that they'll be ranked by just one of them at a time. Click on that button again to show all the districts by default. <i>If you click on a district's shape you'll enter the district view, where it's stats will be shown in detail.</i> If you use the criteria buttons from here details for that criteria will be drawn over the district using markers. In case of marker oversaturation, a heatmap will be drawn instead. Click the district again or hit the return button to see the whole map again</p>
+                <p>In the <i>Charts</i> section you'll find detailed information and rankings for each category. Also, you'll be able to download CSV files with information for each criteria</p>
+                <a id="startBtn" class="btn coloredBtn" href="#mapSection">Start comparing!</a>
+              </div>
+            </div>
+            <div class = "col-md-6">              
+              <div id="exampleChart">
+                <h5>Hover over a bubble to see the number of districts for each borough!</h5>
+                <svg></svg>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row justify-content-around full-viewport" id="mapSection">
+            
+            <div id="districtDetailTab"class>
+              <h1>District details</h1>
+              <div id="districtDetailChart"><svg></svg></div>
+              <table id="detailsTable">
+                        <thead>
+                          <tr>
+                          </tr>
+                        </thead>
+                          <tbody id="detailsTableBody">
+                            <tr>
+                              <td colspan="2" id="distanceCell">Distance to NYU: 1680m</td>
+                            </tr>
+														<tr>
+                              <td id="housingCell">Affordable units: 168</td>
+                              <td id="safetyCell">Crimes: 14</td>
+                            </tr>
+                            <tr>
+                              
+                              <td  id="marketsCell">Farmers' markets: 168</td>
+                              <td  id="galleriesCell">Art galleries: 45</td>
+                            </tr>
+                            <tr>
+                              <td id="transportCell">Subway entrances: 168</td>
+                              <td id="childcareCell">Childcare programs: 168</td>
+                            </tr>
+                          </tbody>
+                </table>
+              <button class="btn coloredBtn" id="testBtn">Return</button>
+            </div>
+            
+            <div id="googleMapContainer" class="col-md-12"></div>
+            
+            <div id="buttonContainer">
+                <button class="btn coloredBtn crit" id="housBtn"><img src="https://image.flaticon.com/icons/svg/126/126511.svg" class ="button-icon" width="20" heigth="20"></img>Affordability</button>
+                <button class="btn coloredBtn crit" id="distBtn"><img src="https://image.flaticon.com/icons/svg/149/149435.svg" class ="button-icon" width="20" heigth="20"></img> Distance to NYU</button>
+                <button class="btn coloredBtn crit" id="safBtn"><img src="https://image.flaticon.com/icons/svg/271/271093.svg" class ="button-icon" width="20" heigth="20"></img> Safety</button>
+                <button class="btn coloredBtn crit"id="triplBtn"> <img src="https://image.flaticon.com/icons/svg/149/149298.svg" class ="button-icon" width="20" heigth="20"></img> Price, distance and safety</button>
+                <button class="btn coloredBtn crit" id="markBtn"><img src="https://image.flaticon.com/icons/svg/149/149457.svg" class ="button-icon" width="20" heigth="20"></img>Farmers' markets</button>
+                <button class="btn coloredBtn crit" id="galBtn"><img src="https://image.flaticon.com/icons/svg/149/149093.svg" class ="button-icon" width="20" heigth="20"></img>Art galleries</button>
+                <button class="btn coloredBtn crit" id="transpBtn"><img src="https://image.flaticon.com/icons/svg/1185/1185568.svg" class ="button-icon" width="20" heigth="20"></img>Subway entrances</button>
+                <button class="btn coloredBtn crit" id="childBtn"><img src="https://image.flaticon.com/icons/svg/829/829141.svg" class ="button-icon" width="20" heigth="20"></img>Childcare programs</button>
+              </div>
+            
+          </div>
+          
+                   
+          
+          	<div class="row full-viewport" id="chartSection">
+              <div class="col-md-4" id="chartSectionLeft">
+                Select a category to view detailed data
+                <select id="criteriaSelect">
+                  <option selected disabled >Select a sorting option</option>
+                  <option value="housing">Sort by housing</option>
+                  <option value="distance">Sort by distance</option>
+                  <option value = "safety">Sort by safety
+                  </option>
+                  <option value = "triple">Ranking Triple</option>
+                  <option value = "markets">Sort by amount of Farmers' markets</option>
+                  <option value = "galleries">Sort by number of art galleries</option>
+                  <option value = "transport">Sort by number of subway station entrances</option>
+                  <option value = "childcare">Sort by number of Child Care Regulated programs</option>
+                </select>                
+                <div id="csvTableWrapper">
+                  <table id="csvTable">
+                          <thead>
+                            <tr>
+                              <th colspan="4" id="tableTitle">Do a selection!</th>
+                            </tr>
+                            <tr>
+                              <th>Position</th>
+                              <th> District </th>
+                              <th>Borough</th>
+                              <th id="critTableHeader">Criteria</th>
+                            </tr>
+                          </thead>
+                            <tbody id="tableBody">
+
+                            </tbody>
+                  </table>
+                </div>
+                <button id="csvBtn" class="btn coloredBtn">Download table CSV</button>
+              </div>    
+              <div class='col-md-8' id='chartSectionRight'>
+              	<div id='chartSectionchart'><svg></svg></div>
+              </div>
+          </div>          	          
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <!--
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+            <script type="text/javascript" src="./js/map.js"></script>
+      <script type="text/javascript" src="./js/visualization.js"></script>
+      <script type="text/javascript" src="./js/main.js"></script>
+      <!-- Google Maps -->
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDphGVfxEq0-P0a0Fn8SS7tijAeU0tYwss&callback=onGoogleMapResponse&libraries=geometry,visualization"
+      ></script>
+    </body>
+  </html>

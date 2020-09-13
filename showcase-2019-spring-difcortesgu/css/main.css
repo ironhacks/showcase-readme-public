@@ -1,0 +1,208 @@
+html { 
+  height: 100% 
+} 
+
+body { 
+  height: 100%; 
+  margin: 0px; 
+  padding: 0px;
+}
+
+svg{
+  position:relative;
+  width:100%;
+  height:100%;
+  top:5px;
+}
+
+#MapContainer { 
+  height: 100%;
+} 
+
+#loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("https://digitalsynopsis.com/wp-content/uploads/2016/06/loading-animations-preloader-gifs-ui-ux-effects-3.gif") 50% 50% no-repeat rgb(249,249,249);
+    background-color: white;
+    opacity: 1;
+}
+
+body {
+  background-color: #EDEDED;
+}
+.circular-menu {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 10;
+}
+
+.circular-menu .floating-btn {
+  display: block;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  line-height: 3.9;
+  z-index: 0;
+  cursor: pointer;
+  outline: 0;
+}
+
+.circular-menu.active .floating-btn {
+  box-shadow: inset 0 0 3px hsla(0, 0%, 0%, .3);
+}
+
+.circular-menu .floating-btn:active {
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, .4);
+}
+
+.circular-menu .floating-btn i {
+  font-size: 1.3em;
+  transition: transform .2s;  
+}
+
+.circular-menu.active .floating-btn i {
+  transform: rotate(-45deg);
+}
+
+.circular-menu:after {
+  display: block;
+  content: ' ';
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  transition: all .3s ease;
+}
+
+.circular-menu.active:after {
+  transform: scale3d(5.5, 5.5, 1);
+  transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+}
+
+.circular-menu .items-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.circular-menu .menu-item {
+  position: absolute;
+  top: .2em;
+  right: .2em;
+  z-index: -1;
+  display: block;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 1em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3;
+  background-color: hsla(0,0%,0%,.1);
+  transition: transform .3s ease, background .2s ease;
+  cursor: pointer;
+}
+
+.circular-menu .menu-item:hover {
+  background-color: hsla(0,0%,0%,.3);
+}
+
+.circular-menu.circular-menu-left {
+  right: auto; 
+  left: 1em;
+}
+
+.circular-menu.circular-menu-left .floating-btn {
+  background-color: hsl(217, 89%, 61%);
+}
+
+.circular-menu.circular-menu-left:after {
+  background-color: hsl(217, 89%, 61%);
+}
+
+.circular-menu.circular-menu-left.active .floating-btn i {
+  transform: rotate(90deg);
+}
+
+.circular-menu.circular-menu-left.active .menu-item:nth-child(1) {
+  transform: translate3d(-1em,7em,0);
+}
+
+.circular-menu.circular-menu-left.active .menu-item:nth-child(2) {
+  transform: translate3d(3.5em,6.3em,0);
+}
+
+.circular-menu.circular-menu-left.active .menu-item:nth-child(3) {
+  transform: translate3d(6.5em,3.2em,0);
+}
+
+.circular-menu.circular-menu-left.active .menu-item:nth-child(4) {
+  transform: translate3d(7em,-1em,0);
+}
+
+@keyframes vanish {
+  from {
+    opacity: 0;
+    height: 0rem;
+    z-index: -4;
+  }
+
+  to {
+    height: 20rem;
+    opacity: 1;
+    z-index: 2; 
+  }
+}
+
+#loader h1{
+  z-index: 9999;
+  position: fixed;
+  top: 30%;
+  left: 40%;
+}
+
+
+.card.text-white.mb-3{
+  max-width: 30rem;
+  max-height: 20rem;
+  height: 0rem;
+  position: fixed;
+  top: 13rem;
+  left:.3rem;
+  z-index: -4;
+  opacity: 0;
+  animation-name: vanish;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused;
+}
+.card.text-white.bg-info.mb-3.activo{
+  height: 25rem;
+  opacity: 1;
+  z-index: 2;   
+}
+
+rect:hover {  fill:white; }
+.axis {  font: 10px sans-serif; }
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {  display: none; }
+
