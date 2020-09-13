@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!---->
+      <!--Basic Setup-->
+      <meta charset="UTF-8">
+      <title>Projectsito</title>
+      <link rel="icon" href="https://www.emojibase.com/resources/img/emojis/hangouts/1f437.png">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="style.css">
+      <!--Mobile Optimization-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!--Import Bootstrap -->
+      <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+      <!--Garamond Font-->
+      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+      <!--Raleway Font-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Projectsito</h3>
+                    <img src="https://i.imgur.com/JMeW7EW.png">
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-map-marker"></i>
+                            Map
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a onclick="displayAffordablePolygons()">Affordable</a></li>
+                            <li><a onclick="displaySafestPolygons()">Safety</a></li>
+                            <li><a onclick="displayClosestPolygons()">Closeness</a></li>
+                            <li><a onclick="displayTop3Polygons()">Top 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                          <i class="glyphicon glyphicon-signal"></i>
+                          Tables & Charts
+                      </a>
+                      <ul class="collapse list-unstyled" id="pageSubmenu">
+                          <li><a onclick="exportTableToCSV('tables.csv')">Export</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-send"></i>
+                            About & Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="contenido">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon glyphicon-menu-hamburger"></i>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                              <li><a href="#map-container">Map</a></li>
+                              <li><a href="#charts-container">Charts</a></li>
+                              <li><a href="#tables-container">Tables</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <h2>Map</h2>
+                 <div class="fluid-container" id="map-container">
+                   <div class="row">
+                     <div class="col-md-3">
+                       <div class="row">
+                         <h1 class="Title">Closeness</h1>
+                         <svg id="Closeness" width="100%" height="205"></svg>
+                       </div>
+                       <div class="row">
+                         <h1 class="Title">Safety</h1>
+                         <svg id="Safety" width="100%" height="205"></svg>
+                       </div>
+                       <div class="row">
+                         <h1 class="Title">Affordability</h1>
+                         <svg id="Affordability" width="100%" height="205"></svg>
+                       </div>
+                     </div>
+                     <div class="col-md-9">
+                       <div id="map"></div>
+                     </div>
+                   </div>
+                 </div>
+
+                <div class="line"></div>
+
+                <h2>Charts</h2>
+
+                <div class="fluid-container" id="charts-container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,101)">101</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,102)">102</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,103)">103</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,104)">104</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,105)">105</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,106)">106</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,107)">107</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,108)">108</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,109)">109</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,110)">110</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,111)">111</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,112)">112</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,201)">201</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,202)">202</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,203)">203</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,204)">204</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,205)">205</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,06)">206</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,207)">207</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,208)">208</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,209)">209</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,210)">210</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,211)">211</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,212)">212</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,301)">301</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,302)">302</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,303)">303</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,304)">304</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,305)">305</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,306)">306</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,307)">307</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,308)">308</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,309)">309</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,310)">310</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,311)">311</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,312)">312</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,313)">313</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,314)">314</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,315)">315</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,316)">316</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,317)">317</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,318)">318</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,401)">401</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,402)">402</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,403)">403</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,404)">404</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,405)">405</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,406)">406</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,407)">407</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,408)">408</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,409)">409</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,410)">410</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,411)">411</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,412)">412</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,413)">413</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,414)">414</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,501)">501</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,502)">502</button>
+                         <button type="button" class="btn btn-danger" onclick="updateRadar(true,503)">503</button>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="output2"></div>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,101)">101</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,102)">102</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,103)">103</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,104)">104</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,105)">105</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,106)">106</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,107)">107</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,108)">108</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,109)">109</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,110)">110</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,111)">111</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,112)">112</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,201)">201</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,202)">202</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,203)">203</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,204)">204</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,205)">205</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,06)">206</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,207)">207</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,208)">208</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,209)">209</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,210)">210</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,211)">211</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,212)">212</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,301)">301</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,302)">302</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,303)">303</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,304)">304</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,305)">305</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,306)">306</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,307)">307</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,308)">308</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,309)">309</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,310)">310</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,311)">311</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,312)">312</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,313)">313</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,314)">314</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,315)">315</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,316)">316</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,317)">317</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,318)">318</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,401)">401</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,402)">402</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,403)">403</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,404)">404</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,405)">405</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,406)">406</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,407)">407</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,408)">408</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,409)">409</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,410)">410</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,411)">411</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,412)">412</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,413)">413</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,414)">414</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,501)">501</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,502)">502</button>
+                        <button type="button" class="btn btn-info" onclick="updateRadar(false,503)">503</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-7">
+                      <div class="radarChart"></div>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+
+                <div class="line"></div>
+
+                <h2>Tables</h2>
+                <div class="container" id="tables-container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div id="tableWrapper1">
+              					<div id="tableScroll1">
+              						<table>
+              								<tr>
+              									<th colspan="2"> Closeness </th>
+              								</tr>
+              								<tr>
+              									<th> # </th>
+              									<th> Distance to NYU (Km) </th>
+              								</tr>
+              								<tbody id="mainTableBody1">
+
+              								</tbody>
+              						</table>
+              					</div>
+              				</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div id="tableWrapper2">
+              					<div id="tableScroll2">
+              						<table>
+              								<tr>
+              									<th colspan="2"> Safety </th>
+              								</tr>
+              								<tr>
+              									<th> # </th>
+              									<th> Number of Crimes </th>
+              								</tr>
+              								<tbody id="mainTableBody2">
+
+              								</tbody>
+              						</table>
+              					</div>
+              				</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div id="tableWrapper3">
+              					<div id="tableScroll3">
+              						<table>
+              								<tr>
+              									<th colspan="2"> Affordability </th>
+              								</tr>
+              								<tr>
+              									<th> # </th>
+              									<th> Extreme Low Income Units </th>
+              								</tr>
+              								<tbody id="mainTableBody3">
+
+              								</tbody>
+              						</table>
+              					</div>
+              				</div>
+                    </div>
+                  </div>
+                  <div class="row" id="top3">
+                    <div class="col-md-12">
+                      <div id="tableWrapper4">
+              					<div id="tableScroll4">
+              						<table>
+              								<tr>
+              									<th colspan="4"> Top 3 Overall </th>
+              								</tr>
+              								<tr>
+              									<th> # </th>
+              									<th> Distance to NYU (Km) </th>
+                                <th> Number of Crimes </th>
+                                <th> Extreme Low Income Units </th>
+              								</tr>
+              								<tbody id="mainTableBody4">
+
+              								</tbody>
+              						</table>
+              					</div>
+              				</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="btn btn-warning"  onclick="exportTableToCSV('tables.csv')" id="exportButton">Export tables to CSV</button>
+                  </div>
+               </div>
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+        <script src="https://www.jqueryscript.net/demo/jQuery-Plugin-To-Convert-HTML-Table-To-CSV-tabletoCSV/jquery.tabletoCSV.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDphGVfxEq0-P0a0Fn8SS7tijAeU0tYwss&libraries=geometry,visualization"></script>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="radarChart.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

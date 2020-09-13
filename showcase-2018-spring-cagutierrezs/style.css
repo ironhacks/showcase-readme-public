@@ -1,0 +1,159 @@
+body {
+    color: #444;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+}
+
+.container h3{
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.container h4{
+  margin-top: 30px;
+}
+
+.col-md-2{
+  padding-left: 8px !important;
+}
+
+.dis{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+th{
+  background-color: #61A2DA;
+}
+
+table, th, td{
+	padding: 5px;
+	border: 1px solid black;
+	text-align: center !important;
+}
+
+#googleMapContainer	{
+	margin-top: 0;
+	width: 100%;
+	height: 500px;
+}
+
+#myTable{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+#myTable td{
+  cursor: pointer;
+}
+
+#myTable td:hover{
+  background-color: #849271;
+}
+
+#newTable{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing : 0;
+  margin-top: 0;
+  margin-right: 0 !important;
+  font-size: 13px;
+
+}
+
+#newTable td{
+  cursor: pointer;
+}
+
+#newTable tr:nth-child(even){
+  background-color: #b5b5b3;
+}
+
+#aspects{
+  width: 80%;
+	border-collapse: collapse;
+	border-spacing: 0;
+  margin-top: 0;
+  margin-left: 10%;
+}
+
+#aspects td{
+  cursor: pointer;
+}
+
+#top3{
+  margin-bottom: 30px;
+}
+
+#tableWrapper {
+  position:relative;
+  width:100%;
+  height: 200px;
+}
+
+#tableScroll {
+  height:200px;
+  overflow:auto;
+  margin-top:0;
+}
+
+#close{
+  width: 88%;
+  height: 40px;
+  margin-left: 6%;
+  margin-right: 6%;
+  cursor: pointer;
+}
+
+#crimesChart{
+  width: 1300px;
+  height: 500px;
+}
+
+#buttonDis{
+  display: inline-block;
+  background-color: #61A2DA;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 40px;
+}
+
+#buttonDis span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#buttonDis span:after{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#buttonDis:hover span{
+  padding-right: 20px;
+}
+
+#buttonDis:hover span:after{
+  opacity: 1;
+  right: 0;
+
+}
